@@ -1,0 +1,26 @@
+In JavaScript, a generator is a special type of function that can be paused and resumed during execution, allowing you to generate a sequence of values on-the-fly.
+
+A regular function, on the other hand, runs to completion and returns a value (if any) before exiting.
+
+Here are some key differences between a generator function and a regular function:
+
+Syntax: Generator functions are defined using the function* syntax, while regular functions are defined using the function syntax.
+
+Execution: Generator functions can be paused and resumed during execution, allowing you to generate a sequence of values on-the-fly. Regular functions execute from start to finish in one go.
+
+Return value: Generator functions can use the yield keyword to return a value and pause the execution of the function. Regular functions return a value using the return keyword and exit the function.
+
+Multiple values: Generator functions can generate multiple values over time using the yield keyword, while regular functions can only return a single value.
+
+Iteration: Generator functions are often used to create iterators that can be used to iterate over a sequence of values.
+
+Here's an example of a generator function that generates an infinite sequence of numbers:
+
+function* infiniteNumbers() {
+  let n = 0;
+  while (true) {
+    yield n++;
+  }
+}
+
+

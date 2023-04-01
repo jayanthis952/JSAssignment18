@@ -1,0 +1,16 @@
+In JavaScript, a generator is a special type of function that allows you to generate a sequence of values on demand, using the yield keyword. Here's an example of the syntax of a generator function:
+function* myGenerator() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+In this example, the function myGenerator is a generator function, which is indicated by the * after the function keyword. Inside the function, there are three yield statements, each of which generates a value when the generator is iterated.
+
+To use a generator, you can call the generator function to create an iterator object, like this:
+const iterator = myGenerator();
+Once you have an iterator object, you can use the next() method to generate the next value in the sequence, like this:
+console.log(iterator.next().value); // Output: 1
+console.log(iterator.next().value); // Output: 2
+console.log(iterator.next().value); // Output: 3
+Each time you call next(), the generator function executes until it reaches the next yield statement, and returns an object with a value property that contains the generated value, and a done property that indicates whether the generator has finished generating values.
